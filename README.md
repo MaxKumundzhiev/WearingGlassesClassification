@@ -6,7 +6,7 @@ The process of model training was accomplished within Google Colab and can be in
 
 ## Invoke Inference of the model
 ```bash
-python inference --path <PATH_TO_DATASET_FOLDER>  
+python inference.py --path <PATH_TO_DATASET_FOLDER>  
 ```   
 
 ### Visualisation of sample batch of test images
