@@ -7,8 +7,7 @@
 # github: https://github.com/KumundzhievMaxim
 # -------------------------------------------
 
-
 BATCH_SIZE = 10
 IMG_SIZE = (160, 160)
 
-MODEL_PATH = '/tmp/model'
+MODEL_PATH = 'checkpoints/model'

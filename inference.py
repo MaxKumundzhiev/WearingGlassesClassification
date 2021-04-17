@@ -1,3 +1,12 @@
+# ------------------------------------------
+#
+# Program created by Maksim Kumundzhiev
+#
+#
+# email: kumundzhievmaxim@gmail.com
+# github: https://github.com/KumundzhievMaxim
+# -------------------------------------------
+
 import argparse
 
 import matplotlib.pyplot as plt
@@ -7,8 +16,6 @@ import keras
 import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
-
-
 
 from configurations import IMG_SIZE, BATCH_SIZE, MODEL_PATH
 
@@ -28,6 +35,8 @@ class Inference:
         return keras.models.load_model(MODEL_PATH)
 
     def run(self, path: str):
+        positive_classified = []
+
         test_dataset = self.prepare_dataset(dataset_path=path)
         inference_model = self.load_model()
 
@@ -38,7 +47,7 @@ class Inference:
 
         for image_class in predictions:
             if image_class == 1:
-                pass
+                positive_classified.append(image_class)
 
 
 if __name__ == '__main__':
